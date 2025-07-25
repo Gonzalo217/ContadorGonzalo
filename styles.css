@@ -1,0 +1,181 @@
+:root {
+  --yellow: #FFD700;
+  --yellow-dark: #B45309;
+  --blue-light: #DBEAFE;
+  --blue-dark: #1D4ED8;
+  --glass: rgba(255,255,255,0.72);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, var(--blue-light), #FFFBEB 100%);
+  overflow-x: hidden;
+}
+
+.sun-bg {
+  position: fixed;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sun-svg {
+  width: 90vw;
+  height: 90vw;
+  max-width: 700px;
+  max-height: 700px;
+  opacity: 0.16;
+  display: block;
+  margin: auto;
+}
+
+.center-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-card {
+  background: var(--glass);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 8px 0 rgba(255,215,0,0.08);
+  border: 1.5px solid rgba(255,255,255,0.32);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  max-width: 400px;
+  width: 92vw;
+  margin: 4vw auto 0 auto;
+  padding: 2.2rem 1.2rem 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.4s;
+  animation: cardfadein 0.7s cubic-bezier(.17,.67,.83,.67) both;
+}
+@keyframes cardfadein {
+  from { opacity: 0; transform: translateY(60px) scale(0.97);}
+  to { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+h1 {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 2rem;
+  color: var(--yellow-dark);
+  margin: 0 0 0.6rem 0;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.dias-numero {
+  font-family: 'Inter', 'Poppins', sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: var(--blue-dark);
+  margin-bottom: 0.2em;
+  margin-top: 0.1em;
+  text-align: center;
+  text-shadow: 0 0 12px #b2e0ffcc, 0 0 8px #ffd70044, 0 1px 0 #fff;
+  letter-spacing: 0.04em;
+  transition: color 0.5s, text-shadow 0.7s;
+  filter: drop-shadow(0 2px 2px #e0eaff33);
+  opacity: 0;
+  animation: fadeinUp 1s 0.2s cubic-bezier(.17,.67,.83,.67) forwards;
+}
+@keyframes fadeinUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+
+.dias-label {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  color: #444;
+  font-size: 1.13rem;
+  text-align: center;
+  margin-bottom: 0.45em;
+  opacity: 0;
+  animation: fadeinUp 1s 0.5s cubic-bezier(.17,.67,.83,.67) forwards;
+}
+
+.motivacion {
+  margin-top: 1.1rem;
+  background: #FEF9C3EE;
+  border-radius: 1em;
+  padding: 0.7em 1em;
+  color: #78350F;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-align: center;
+  border: 1.2px solid #FDE68A;
+  box-shadow: 0 1px 4px #fff3;
+  opacity: 0;
+  min-height: 1.5em;
+  transition: opacity 0.5s;
+}
+.motivacion.visible {
+  opacity: 1;
+  animation: fadein 1s 0.7s cubic-bezier(.17,.67,.83,.67) both;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1;}
+}
+
+.fecha-label {
+  font-size: 0.94rem;
+  color: #aaa;
+  margin-top: 1.8em;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  opacity: 0;
+  animation: fadeinUp 1s 0.8s cubic-bezier(.17,.67,.83,.67) forwards;
+}
+
+.frase {
+  font-family: 'Inter', 'Poppins', sans-serif;
+  color: #475569;
+  font-size: 1.07rem;
+  margin-top: 2.5em;
+  margin-bottom: 1.2em;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.5;
+  user-select: none;
+  opacity: 0;
+  max-width: 480px;
+  width: 92vw;
+  animation: frasefadein 1.2s 0.9s cubic-bezier(.17,.67,.83,.67) forwards;
+}
+@keyframes frasefadein {
+  from { opacity: 0; transform: translateY(30px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+
+@media (min-width: 400px) {
+  .glass-card { max-width: 420px; }
+  .dias-numero { font-size: 4.1rem; }
+  h1 { font-size: 2.2rem; }
+  .frase { font-size: 1.13rem;}
+}
+@media (min-width: 600px) {
+  .glass-card { max-width: 470px; padding: 3.2rem 2rem 2.3rem 2rem;}
+  .dias-numero { font-size: 5.2rem; }
+  h1 { font-size: 2.5rem; }
+  .frase { font-size: 1.19rem;}
+}
