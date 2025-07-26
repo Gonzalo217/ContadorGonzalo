@@ -36,10 +36,10 @@ const FRASES = [
 
 // Mensajes motivacionales por milestones
 const MOTIVATION = {
-  7: "¡Ya pasaste 7 días! ¡Seguí así Gonzalo!",
-  14: "¡14 días sin alcohol! ¡Sos un ejemplo!",
-  21: "¡21 días, increíble constancia Gonzalo!",
-  30: "¡30 días! ¡Celebrá tu logro, seguí adelante!"
+  7: "¡Primera Semanita Chonchi! ¡Sos un capo!",
+  14: "¡14 días nuevo record! ¡Cuando sea grande quiero ser como vos!",
+  21: "¡21 días, maquina de estar sobrio te banco!",
+  30: "¡30 días! ¡Chupate para festejar!"
 };
 
 // NUEVA FECHA FIJA: 21/07/2025
