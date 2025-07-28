@@ -45,7 +45,7 @@ const MOTIVATION = {
 // NUEVA FECHA FIJA: 21/07/2025
 function getStartDate() {
   // Formato: yyyy-mm-dd (mes 0-indexado para JS)
-  return new Date(2025, 6, 21); // 21 de julio de 2025 (mes 6)
+  return new Date(2025, 7, 27); // 27 de julio de 2025 (mes 7) Actualizado
 }
 
 // Días desde la fecha indicada hasta hoy
@@ -77,9 +77,9 @@ function mainRender() {
     motivDiv.classList.remove('visible');
   }
 
-  // Fecha de inicio (fija: 21/07/2025)
+  // Fecha de inicio (fija: 27/07/2025)
   document.getElementById('fecha-label').textContent =
-    "Desde el 21/07/2025";
+    "Desde el 27/07/2025";
 
   // Animación frase: reiniciar
   fraseDiv.style.animation = "none";
