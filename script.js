@@ -45,7 +45,7 @@ const MOTIVATION = {
 // NUEVA FECHA FIJA: 21/07/2025
 function getStartDate() {
   // Formato: yyyy-mm-dd (mes 0-indexado para JS)
-  return new Date(2025, 7, 27); // 27 de julio de 2025 (mes 7) Actualizado
+  return new Date(2025, 6, 27); // 27 de julio de 2025 (mes 6 esto es programacion van del 0 al 11) Actualizado
 }
 
 // Días desde la fecha indicada hasta hoy
